@@ -31,7 +31,7 @@ public class Server {
 
         try {
             stmt = conn.createStatement();
-            String sql = "INSERT INTO TABLE secrets_table(user_name, secrets_content) VALUES("
+            String sql = "INSERT INTO secrets_table(user_name, secrets_content) VALUES("
             		+ name + ", " + secret + ")";
             stmt.executeUpdate(sql);
             return "create secret succeeds";
