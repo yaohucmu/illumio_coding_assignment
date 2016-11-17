@@ -33,6 +33,7 @@ public class Server {
             stmt = conn.createStatement();
             String sql = "INSERT INTO secrets_table(user_name, secrets_content) VALUES("
             		+ name + ", " + secret + ")";
+            System.out.println(sql);
             stmt.executeUpdate(sql);
             return "create secret succeeds";
         } catch (SQLException e) {
